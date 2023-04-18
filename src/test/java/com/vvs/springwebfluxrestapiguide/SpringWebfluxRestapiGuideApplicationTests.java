@@ -23,7 +23,7 @@ class SpringWebfluxRestapiGuideApplicationTests {
 	void testGreeting() {
 		webTestClient
 			.get()
-			.uri("/hello")
+			.uri("/hello/Everybody")
 			.accept(MediaType.APPLICATION_JSON)
 			.exchange()
 			.expectStatus()

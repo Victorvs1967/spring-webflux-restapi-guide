@@ -10,8 +10,11 @@ import com.vvs.springwebfluxrestapiguide.client.GreetingClient;
 public class SpringWebfluxRestapiGuideApplication {
 
 	public static void main(String[] args) {
+		// create app context
 		ConfigurableApplicationContext context = SpringApplication.run(SpringWebfluxRestapiGuideApplication.class, args);
+		// add webclient to context
 		GreetingClient greetingClient = context.getBean(GreetingClient.class);
+		// get result
 		System.out.println(">> message = ".concat(greetingClient.getMessage().block()));
 	}
 }

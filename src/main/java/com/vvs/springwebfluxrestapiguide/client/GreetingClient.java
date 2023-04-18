@@ -10,6 +10,7 @@ import reactor.core.publisher.Mono;
 
 @Component
 public class GreetingClient {
+
   private final WebClient client;
 
   public GreetingClient(WebClient.Builder builder) {
@@ -21,7 +22,7 @@ public class GreetingClient {
   public Mono<String> getMessage() {
     return this.client
       .get()
-      .uri("/hello")
+      .uri("/hello/Everybody")
       .accept(MediaType.APPLICATION_JSON)
       .retrieve()
       .bodyToMono(Greeting.class)
